@@ -1,6 +1,5 @@
 const form = document.getElementById("form-numero");
-let primeiroNumero = parseFloat (document.getElementById("n1").value)
-let segundoNumero = parseFloat (document.getElementById("n2").value)
+
 let formEValido = false;
 
 
@@ -15,8 +14,10 @@ form.addEventListener("submit", function(e) {
     
     e.preventDefault()
     
+    let primeiroNumero = parseFloat (document.getElementById("n1").value)
+    let segundoNumero = parseFloat (document.getElementById("n2").value)
     
-    const mensagemSucesso = `O número: <b>${segundoNumero.value}</b> é maior que: <b>${primeiroNumero.value}</b> Parabéns!`;
+    const mensagemSucesso = `O número: <b>${segundoNumero}</b> é maior que: <b>${primeiroNumero}</b> Parabéns! Formulário enviado com sucesso`;
 
     formEValido = decidirSucesso(primeiroNumero, segundoNumero)
     if (formEValido) {
